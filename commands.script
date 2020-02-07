@@ -1,0 +1,655 @@
+Script started on Thu 06 Feb 2020 09:49:31 PM CST
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[?1034h[root@localhost project1]# man mkdir
+[?1049h[?1h=MKDIR(1)                         User Commands                        MKDIR(1)
+
+[1mNAME[0m
+       mkdir - make directories
+
+[1mSYNOPSIS[0m
+       [1mmkdir[0m [[4mOPTION[24m]... [4mDIRECTORY[24m...
+
+[1mDESCRIPTION[0m
+       Create the DIRECTORY(ies), if they do not already exist.
+
+       Mandatory  arguments  to  long  options are mandatory for short options
+       too.
+
+       [1m-m[0m, [1m--mode[0m=[4mMODE[24m
+              set file mode (as in chmod), not a=rwx - umask
+
+       [1m-p[0m, [1m--parents[0m
+              no error if existing, make parent directories as needed
+
+       [1m-v[0m, [1m--verbose[0m
+              print a message for each created directory
+
+:[K[K[?1l>[?1049l
+[1]+  Stopped                 man mkdir
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# cd..
+bash: cd..: command not found
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# cd ..
+]0;Connor@localhost:/home/Connor/Documents/comp3500[root@localhost comp3500]# cd project1
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# pwd
+/home/Connor/Documents/comp3500/project1
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+testscript  typescript
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# mkdir testDir
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# cp testscript
+cp: missing destination file operand after `testscript'
+Try `cp --help' for more information.
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# cp testscript testDir
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# mv testscript testDir
+mv: overwrite `testDir/testscript'? ls
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+[0m[01;34mtestDir[0m  testscript  typescript
+[m]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# mv testscript testDir
+mv: overwrite `testDir/testscript'? y
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+[0m[01;34mtestDir[0m  typescript
+[m]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# cd testDir
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1/testDir[root@localhost testDir]# ls
+testscript
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1/testDir[root@localhost testDir]# rm testSc[K[Kscript
+rm: remove regular file `testscript'? y
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1/testDir[root@localhost testDir]# cd ..
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# rmdir testDir
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# chmod a=rw[K[K[K[K[K[K[K[K[K[Kls
+typescript
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# rmdir[K[K[K[K[Kchmod a=rw typescript
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# clear
+[H[2J]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# top
+[H[2J(B[mtop - 21:51:29 up 59 min,  4 users,  load average: 0.00, 0.00, 0.00(B[m[39;49m[K
+Tasks:(B[m[39;49m(B[m 147 (B[m[39;49mtotal,(B[m[39;49m(B[m   1 (B[m[39;49mrunning,(B[m[39;49m(B[m 135 (B[m[39;49msleeping,(B[m[39;49m(B[m  11 (B[m[39;49mstopped,(B[m[39;49m(B[m   0 (B[m[39;49mzombie(B[m[39;49m[K
+Cpu(s):(B[m[39;49m(B[m  4.4%(B[m[39;49mus,(B[m[39;49m(B[m  1.5%(B[m[39;49msy,(B[m[39;49m(B[m  1.0%(B[m[39;49mni,(B[m[39;49m(B[m 92.8%(B[m[39;49mid,(B[m[39;49m(B[m  0.0%(B[m[39;49mwa,(B[m[39;49m(B[m  0.1%(B[m[39;49mhi,(B[m[39;49m(B[m  0.1%(B[m[39;49msi,(B[m[39;49m(B[m  0.0%(B[m[39;49mst(B[m[39;49m[K
+Mem: (B[m[39;49m(B[m  1030580k (B[m[39;49mtotal,(B[m[39;49m(B[m   944320k (B[m[39;49mused,(B[m[39;49m(B[m    86260k (B[m[39;49mfree,(B[m[39;49m(B[m    52932k (B[m[39;49mbuffers(B[m[39;49m[K
+Swap:(B[m[39;49m(B[m   835576k (B[m[39;49mtotal,(B[m[39;49m(B[m        0k (B[m[39;49mused,(B[m[39;49m(B[m   835576k (B[m[39;49mfree,(B[m[39;49m(B[m   722072k (B[m[39;49mcached(B[m[39;49m[K
+[6;1H
+[7m  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND            (B[m[39;49m[K
+(B[m(B[m25247 root      20   0  2704 1024  780 R  3.9  0.1   0:00.02 top                (B[m[39;49m
+(B[m    1 root      20   0  2900 1436 1216 S  0.0  0.1   0:01.43 init               (B[m[39;49m
+(B[m    2 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kthreadd           (B[m[39;49m
+(B[m    3 root      RT   0     0    0    0 S  0.0  0.0   0:00.00 migration/0        (B[m[39;49m
+(B[m    4 root      20   0     0    0    0 S  0.0  0.0   0:00.12 ksoftirqd/0        (B[m[39;49m
+(B[m    5 root      RT   0     0    0    0 S  0.0  0.0   0:00.00 migration/0        (B[m[39;49m
+(B[m    6 root      RT   0     0    0    0 S  0.0  0.0   0:00.07 watchdog/0         (B[m[39;49m
+(B[m    7 root      20   0     0    0    0 S  0.0  0.0   0:00.71 events/0           (B[m[39;49m
+(B[m    8 root      20   0     0    0    0 S  0.0  0.0   0:00.00 cgroup             (B[m[39;49m
+(B[m    9 root      20   0     0    0    0 S  0.0  0.0   0:00.00 khelper            (B[m[39;49m
+(B[m   10 root      20   0     0    0    0 S  0.0  0.0   0:00.00 netns              (B[m[39;49m
+(B[m   11 root      20   0     0    0    0 S  0.0  0.0   0:00.00 async/mgr          (B[m[39;49m
+(B[m   12 root      20   0     0    0    0 S  0.0  0.0   0:00.00 pm                 (B[m[39;49m
+(B[m   13 root      20   0     0    0    0 S  0.0  0.0   0:00.06 sync_supers        (B[m[39;49m
+(B[m   14 root      20   0     0    0    0 S  0.0  0.0   0:00.03 bdi-default        (B[m[39;49m
+(B[m   15 root      20   0     0    0    0 S  0.0  0.0   0:00.00 kintegrityd/0      (B[m[39;49m
+(B[m   16 root      20   0     0    0    0 S  0.0  0.0   0:00.83 kblockd/0          (B[m[39;49m[6;1H[K[25;1H[?12l[?25h
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# who
+Connor   tty1         2020-02-06 20:53 (:0)
+Connor   pts/0        2020-02-06 20:53 (:0.0)
+root     pts/1        2020-02-06 21:43
+root     pts/2        2020-02-06 21:49
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# nproc
+1
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# exit
+exit
+There are stopped jobs.
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+typescript
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# t[Kfile typescript
+typescript: ASCII English text, with CRLF, CR, LF line terminators, with escape sequences, with overstriking
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ,v[K[Kmv c[Ktypescript commands.script
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+commands.script
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# more /proc/cppui[K[K[Kuinfo
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 60
+model name	: Intel(R) Core(TM) i7-4810MQ CPU @ 2.80GHz
+stepping	: 3
+cpu MHz		: 2793.548
+cache size	: 6144 KB
+fdiv_bug	: no
+hlt_bug		: no
+f00f_bug	: no
+coma_bug	: no
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov 
+pat pse36 clflush mmx fxsr sse sse2 ht nx rdtscp constant_tsc up xtopology nonst
+op_tsc unfair_spinlock pni pclmulqdq monitor ssse3 cx16 pcid sse4_1 sse4_2 x2api
+c movbe popcnt aes xsave avx rdrand hypervisor lahf_lm abm fsgsbase avx2 invpcid
+bogomips	: 5587.09
+clflush size	: 64
+cache_alignment	: 64
+[7m--More--(0%)[27m[K
+...skipping one line
+power management:
+
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# more /proc/cpuinfo > cpuinfo.txt
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# more /proc/meminfo > meminfo.txt
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# more /sbin/lspci
+
+******** /sbin/lspci: Not a text file ********
+
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# more /sbin/lspci > lspci.txt
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# more /proc/interrupts
+           CPU0       
+  0:        293    XT-PIC-XT        timer
+  1:       4605    XT-PIC-XT        i8042
+  2:          0    XT-PIC-XT        cascade
+  8:          2    XT-PIC-XT        rtc0
+  9:      32699    XT-PIC-XT        acpi, eth0
+ 10:       1202    XT-PIC-XT        ohci_hcd:usb1
+ 12:        150    XT-PIC-XT        i8042
+ 14:      69034    XT-PIC-XT        ata_piix
+ 15:       2081    XT-PIC-XT        ata_piix
+NMI:          0   Non-maskable interrupts
+LOC:     340249   Local timer interrupts
+SPU:          0   Spurious interrupts
+PMI:          0   Performance monitoring interrupts
+IWI:          0   IRQ work interrupts
+RES:          0   Rescheduling interrupts
+CAL:          0   Function call interrupts
+TLB:          0   TLB shootdowns
+TRM:          0   Thermal event interrupts
+THR:          0   Threshold APIC interrupts
+MCE:          0   Machine check exceptions
+MCP:         13   Machine check polls
+ERR:          0
+[7m--More--(0%)[27m[K
+...skipping one line
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# s[Kmore /proc/interrupts > intt[Kerrupts.txt
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+commands.script  cpuinfo.txt  interrupts.txt  lspci.txt  meminfo.txt
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# touch simple.c
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# vim simple.c
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"simple.c" 0L, 0C[>c[2;1H[1m[34m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H0,0-1[9CAll[1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[24;1H[1m-- INSERT --[m[24;13H[K[24;63H0,1[11CAll[1;1H[?12l[?25h[?25l#[24;63H1,2[1;2H[?12l[?25h[?25li[24;65H3[1;3H[?12l[?25h[?25ln[24;65H4[1;4H[?12l[?25h[?25lc[24;65H5[1;5H[?12l[?25h[?25ll[24;65H6[1;6H[?12l[?25h[?25lu[24;65H7[1;7H[?12l[?25h[?25ld[24;65H8[1;8H[?12l[?25h[?25le[24;65H9[1;9H[?12l[?25h[?25l[24;65H10[1;10H[?12l[?25h[?25l[35m#include <[m[24;66H1[1;11H[?12l[?25h[?25ls[24;66H2[1;12H[?12l[?25h[?25lt[24;66H3[1;13H[?12l[?25h[?25ld[24;66H4[1;14H[?12l[?25h[?25li[24;66H5[1;15H[?12l[?25h[?25lo[24;66H6[1;16H[?12l[?25h[?25l.[24;66H7[1;17H[?12l[?25h[?25lh[24;66H8[1;18H[?12l[?25h[?25l[1;10H[31m<stdio.h>[m[24;66H9[1;19H[?12l[?25h[?25l[2;1H[K[24;63H2,1 [2;1H[?12l[?25h[?25li[24;65H2[2;2H[?12l[?25h[?25ln[24;65H3[2;3H[?12l[?25h[?25l[32mint[m[24;65H4[2;4H[?12l[?25h[?25l[24;65H5[2;5H[?12l[?25h[?25lm[24;65H6[2;6H[?12l[?25h[?25la[24;65H7[2;7H[?12l[?25h[?25li[24;65H8[2;8H[?12l[?25h[?25ln[24;65H9[2;9H[?12l[?25h[?25l([24;65H10[2;10H[?12l[?25h[?25l)[46m()[m[24;66H1[2;11H[?12l[?25h[?25l()[24;66H2[2;12H[?12l[?25h[?25l{[24;66H3[2;13H[?12l[?25h[?25l[3;1H[K[24;63H3,1 [3;1H[?12l[?25h[?25l[4;1H[K[24;63H4[4;1H[?12l[?25h[?25l}[2;12H[46m{
+
+}[m[24;65H2[4;2H[?12l[?25h[?25l[2;12H{
+
+}[24;63H3,1[3;1H[?12l[?25h[?25l[24;65H2-9[3;9H[?12l[?25h[?25li[24;65H3-10[3;10H[?12l[?25h[?25ln[24;65H4-11[3;11H[?12l[?25h[?25l[32mint[m[24;65H5-12[3;12H[?12l[?25h[?25l[24;65H6-13[3;13H[?12l[?25h[?25ln[24;65H7-14[3;14H[?12l[?25h[?25lu[24;65H8-15[3;15H[?12l[?25h[?25lm[24;65H9-16[3;16H[?12l[?25h[?25ls[24;65H10-17[3;17H[?12l[?25h[?25l[[24;66H1-18[3;18H[?12l[?25h[?25l[31m1[m[24;66H2-19[3;19H[?12l[?25h[?25l[31m0[m[24;66H3-20[3;20H[?12l[?25h[?25l][46m[[2C][m[24;66H4-21[3;21H[?12l[?25h[?25l[[2C][24;66H5-22[3;22H[?12l[?25h[?25l=[24;66H6-23[3;23H[?12l[?25h[?25l[24;66H7-24[3;24H[?12l[?25h[?25l{[46m{
+}[m[24;66H8-25[3;25H[?12l[?25h[?25l}[46m}[m
+}[24;66H9-26[3;26H[?12l[?25h[?25l[24;66H8-25[3;25H[?12l[?25h[?25l[24;66H9-26[3;26H[?12l[?25h[?25l'{}[24;65H20-27[3;27H[?12l[?25h[?25l[3;26H[K[3;24H[46m{}[m[24;65H19-26[3;26H[?12l[?25h[?25l;{}[24;65H20-27[3;27H[?12l[?25h[?25l[46m{}[m[24;65H19-26[3;26H[?12l[?25h[?25l[24;66H8-25[3;25H[?12l[?25h[?25l[46m [m}; [46m}[m[24;66H9-26[3;26H[?12l[?25h[?25l[24;66H8-25[3;25H[?12l[?25h[?25l[31m1[m[46m [m};{[1C [24;66H9-26[3;26H[?12l[?25h[?25l, };[24;65H20-27[3;27H[?12l[?25h[?25l  };[24;66H1-28[3;28H[?12l[?25h[?25l[31m3[m };[24;66H2-29[3;29H[?12l[?25h[?25l, };[24;66H3-30[3;30H[?12l[?25h[?25l  };[24;66H4-31[3;31H[?12l[?25h[?25l[31m4[m };[24;66H5-32[3;32H[?12l[?25h[?25l, };[24;66H6-33[3;33H[?12l[?25h[?25l  };[24;66H7-34[3;34H[?12l[?25h[?25l[31m6[m };[24;66H8-35[3;35H[?12l[?25h[?25l };[3;37H[K[24;66H7-34[3;34H[?12l[?25h[?25l[31m5[m };[24;66H8-35[3;35H[?12l[?25h[?25l, };[24;66H9-36[3;36H[?12l[?25h[?25l  };[24;65H30-37[3;37H[?12l[?25h[?25l[31m6[m };[24;66H1-38[3;38H[?12l[?25h[?25l, };[24;66H2-39[3;39H[?12l[?25h[?25l  };[24;66H3-40[3;40H[?12l[?25h[?25l[31m7[m };[24;66H4-41[3;41H[?12l[?25h[?25l, };[24;66H5-42[3;42H[?12l[?25h[?25l  };[24;66H6-43[3;43H[?12l[?25h[?25l[31m9[m };[24;66H7-44[3;44H[?12l[?25h[?25l, };[24;66H8-45[3;45H[?12l[?25h[?25l  };[24;66H9-46[3;46H[?12l[?25h[?25l[31m1[m };[24;65H40-47[3;47H[?12l[?25h[?25l[31m1[m };[24;66H1-48[3;48H[?12l[?25h[?25l, };[24;66H2-49[3;49H[?12l[?25h[?25l  };[24;66H3-50[3;50H[?12l[?25h[?25l[31m1[m };[24;66H4-51[3;51H[?12l[?25h[?25l[31m3[m };[24;66H5-52[3;52H[?12l[?25h[?25l };[3;54H[K[24;66H4-51[3;51H[?12l[?25h[?25l[31m2[m };[24;66H5-52[3;52H[?12l[?25h[?25l, };[24;66H6-53[3;53H[?12l[?25h[?25l  };[24;66H7-54[3;54H[?12l[?25h[?25l[31m1[m };[24;66H8-55[3;55H[?12l[?25h[?25l[31m5[m };[24;66H9-56[3;56H[?12l[?25h[?25l[3;24H[46m{[32C}[m[24;65H50-57[3;57H[?12l[?25h[?25l}[46m;[m[3;58H[K[3;56H[46m}[m;[24;65H49-56[3;56H[?12l[?25h[?25l[24;65H50-57[3;57H[?12l[?25h[?25l[3;24H{[31C}[24;66H1-58[3;58H[?12l[?25h[?25l[4;23r[4;1H[L[1;24r[24;63H[K[24;63H4,1[11CAll[4;1H[?12l[?25h[?25l[24;65H2-9[4;9H[?12l[?25h[?25lf[24;65H3-10[4;10H[?12l[?25h[?25lo[24;65H4-11[4;11H[?12l[?25h[?25l[33mfor[m[24;65H5-12[4;12H[?12l[?25h[?25l[24;65H6-13[4;13H[?12l[?25h[?25l([24;65H7-14[4;14H[?12l[?25h[?25li[24;65H8-15[4;15H[?12l[?25h[?25ln[24;65H9-16[4;16H[?12l[?25h[?25l[32mint[m[24;65H10-17[4;17H[?12l[?25h[?25l[24;66H1-18[4;18H[?12l[?25h[?25li[24;66H2-19[4;19H[?12l[?25h[?25l[24;66H3-20[4;20H[?12l[?25h[?25l=[24;66H4-21[4;21H[?12l[?25h[?25l[24;66H5-22[4;22H[?12l[?25h[?25l[31m0[m[24;66H6-23[4;23H[?12l[?25h[?25l;[24;66H7-24[4;24H[?12l[?25h[?25l[24;66H8-25[4;25H[?12l[?25h[?25li[24;66H9-26[4;26H[?12l[?25h[?25l[24;65H20-27[4;27H[?12l[?25h[?25l<[24;66H1-28[4;28H[?12l[?25h[?25l[24;66H2-29[4;29H[?12l[?25h[?25ln[24;66H3-30[4;30H[?12l[?25h[?25lu[24;66H4-31[4;31H[?12l[?25h[?25lm[24;66H5-32[4;32H[?12l[?25h[?25ls[24;66H6-33[4;33H[?12l[?25h[?25l.[24;66H7-34[4;34H[?12l[?25h[?25ll[24;66H8-35[4;35H[?12l[?25h[?25le[24;66H9-36[4;36H[?12l[?25h[?25ln[24;65H30-37[4;37H[?12l[?25h[?25lg[24;66H1-38[4;38H[?12l[?25h[?25lt[24;66H2-39[4;39H[?12l[?25h[?25lh[24;66H3-40[4;40H[?12l[?25h[?25l;[24;66H4-41[4;41H[?12l[?25h[?25l[24;66H5-42[4;42H[?12l[?25h[?25li[24;66H6-43[4;43H[?12l[?25h[?25l+[24;66H7-44[4;44H[?12l[?25h[?25l+[24;66H8-45[4;45H[?12l[?25h[?25l)[4;13H[46m([31C)[m[24;66H9-46[4;46H[?12l[?25h[?25l[4;13H([31C)[24;65H40-47[4;47H[?12l[?25h[?25l{[46m{
+}[m[24;66H1-48[4;48H[?12l[?25h[?25l[5;23r[5;1H[L[1;24r[6;1H}[24;63H[K[24;63H5,1[11CAll[4;47H{
+[?12l[?25h[?25l[6;23r[6;1H[L[1;24r[24;63H[K[24;63H6,1[11CAll[6;1H[?12l[?25h[?25l[24;65H2-9[6;9H[?12l[?25h[?25l}[4;47H[46m{[6;9H}[m[24;65H3-10[6;10H[?12l[?25h[?25l[4;47H{[6;9H}[24;63H5,1   [5;1H[?12l[?25h[?25l[24;65H2-9[5;9H[?12l[?25h[?25l[24;65H3-17[5;17H[?12l[?25h[?25ls[24;65H4-18[5;18H[?12l[?25h[?25l[5;17H[K[24;65H3-17[5;17H[?12l[?25h[?25l[24;63H4,10-17[4;17H[?12l[?25h[?25l[3;17H[46m[[2C][m[24;63H3[3;17H[?12l[?25h[?25l[24;66H1-18[3;18H[?12l[?25h[?25l[[2C][24;66H2-19[3;19H[?12l[?25h[?25l[46m[[2C][m[24;66H3-20[3;20H[?12l[?25h[?25l[24;66H4-21[3;21H[?12l[?25h[?25l[[2C][24;66H5-22[3;22H[?12l[?25h[?25l[24;66H6-23[3;23H[?12l[?25h[?25l [46m{[31C}[m[24;66H7-24[3;24H[?12l[?25h[?25l[24;66H8-25[3;25H[?12l[?25h[?25l{[31C}[24;66H9-26[3;26H[?12l[?25h[?25l[24;65H20-27[3;27H[?12l[?25h[?25l[24;66H1-28[3;28H[?12l[?25h[?25l[24;66H2-29[3;29H[?12l[?25h[?25l[24;66H3-30[3;30H[?12l[?25h[?25l[24;66H4-31[3;31H[?12l[?25h[?25l[24;66H5-32[3;32H[?12l[?25h[?25l[24;66H6-33[3;33H[?12l[?25h[?25l[24;66H7-34[3;34H[?12l[?25h[?25l[24;66H8-35[3;35H[?12l[?25h[?25l[24;66H9-36[3;36H[?12l[?25h[?25l[24;65H30-37[3;37H[?12l[?25h[?25l[24;66H1-38[3;38H[?12l[?25h[?25l[24;66H2-39[3;39H[?12l[?25h[?25l[24;66H3-40[3;40H[?12l[?25h[?25l[24;66H4-41[3;41H[?12l[?25h[?25l[24;66H5-42[3;42H[?12l[?25h[?25l[24;66H6-43[3;43H[?12l[?25h[?25l[24;66H7-44[3;44H[?12l[?25h[?25l[24;66H8-45[3;45H[?12l[?25h[?25l[24;66H9-46[3;46H[?12l[?25h[?25l[24;65H40-47[3;47H[?12l[?25h[?25l[24;66H1-48[3;48H[?12l[?25h[?25l[24;66H2-49[3;49H[?12l[?25h[?25l[24;66H3-50[3;50H[?12l[?25h[?25l[24;66H4-51[3;51H[?12l[?25h[?25l[24;66H5-52[3;52H[?12l[?25h[?25l[24;66H6-53[3;53H[?12l[?25h[?25l[24;66H7-54[3;54H[?12l[?25h[?25l[24;66H8-55[3;55H[?12l[?25h[?25l[3;24H[46m{[31C}[m[24;66H9-56[3;56H[?12l[?25h[?25l[24;65H50-57[3;57H[?12l[?25h[?25l[3;24H{[31C}[24;66H1-58[3;58H[?12l[?25h[?25l[3;24H[46m{[31C}[m[24;66H0-57[3;57H[?12l[?25h[?25l[3;24H{[31C}[24;66H1-58[3;58H[?12l[?25h[?25l[4;23r[4;1H[L[1;24r[24;63H[K[24;63H4,1[11CAll[4;1H[?12l[?25h[?25l[24;65H2-9[4;9H[?12l[?25h[?25ld[24;65H3-10[4;10H[?12l[?25h[?25l[33mdo[m[24;65H4-11[4;11H[?12l[?25h[?25ldou[24;65H5-12[4;12H[?12l[?25h[?25lb[24;65H6-13[4;13H[?12l[?25h[?25ll[24;65H7-14[4;14H[?12l[?25h[?25l[32mdouble[m[24;65H8-15[4;15H[?12l[?25h[?25l[24;65H9-16[4;16H[?12l[?25h[?25la[24;65H10-17[4;17H[?12l[?25h[?25lv[24;66H1-18[4;18H[?12l[?25h[?25lg[24;66H2-19[4;19H[?12l[?25h[?25l[24;66H3-20[4;20H[?12l[?25h[?25l=[24;66H4-21[4;21H[?12l[?25h[?25l[24;66H5-22[4;22H[?12l[?25h[?25l[31m0[m[24;66H6-23[4;23H[?12l[?25h[?25l;[24;66H7-24[4;24H[?12l[?25h[?25l[24;63H5[5;24H[?12l[?25h[?25l[24;63H6,3-17 [6;17H[?12l[?25h[?25la[24;65H4-18[6;18H[?12l[?25h[?25lv[24;65H5-19[6;19H[?12l[?25h[?25lg[24;65H6-20[6;20H[?12l[?25h[?25l[24;65H7-21[6;21H[?12l[?25h[?25l=[24;65H8-22[6;22H[?12l[?25h[?25l[24;65H9-23[6;23H[?12l[?25h[?25l[24;65H8-22[6;22H[?12l[?25h[?25l[6;21H[K[24;65H7-21[6;21H[?12l[?25h[?25l+[24;65H8-22[6;22H[?12l[?25h[?25l=[24;65H9-23[6;23H[?12l[?25h[?25l[24;65H10-24[6;24H[?12l[?25h[?25ls[24;66H1-25[6;25H[?12l[?25h[?25lq[24;66H2-26[6;26H[?12l[?25h[?25lr[24;66H3-27[6;27H[?12l[?25h[?25lt[24;66H4-28[6;28H[?12l[?25h[?25l([24;66H5-29[6;29H[?12l[?25h[?25l)[46m()[m[24;66H6-30[6;30H[?12l[?25h[?25l;()[24;66H7-31[6;31H[?12l[?25h[?25l[46m()[m[24;66H6-30[6;30H[?12l[?25h[?25l[24;66H5-29[6;29H[?12l[?25h[?25l[46m [m); [46m)[m[24;66H6-30[6;30H[?12l[?25h[?25l[24;66H5-29[6;29H[?12l[?25h[?25l[24;66H6-30[6;30H[?12l[?25h[?25l)[46m;[m[6;31H[K[6;29H[46m)[m;[24;66H5-29[6;29H[?12l[?25h[?25l[46ma[m);a[46m)[m[24;66H6-30[6;30H[?12l[?25h[?25l)[46m;[m[6;31H[K[6;29H[46m)[m;[24;66H5-29[6;29H[?12l[?25h[?25l[46mn[m);n[46m)[m[24;66H6-30[6;30H[?12l[?25h[?25l[46mu[m);u[46m)[m[24;66H7-31[6;31H[?12l[?25h[?25l[46mm[m);m[46m)[m[24;66H8-32[6;32H[?12l[?25h[?25l[46ms[m);s[46m)[m[24;66H9-33[6;33H[?12l[?25h[?25l[46m[[m[1m[37m[41m);[m[[1m[37m[46m)[m[1m[37m[41m;[m[24;65H20-34[6;34H[?12l[?25h[?25l[46mi[m[1m[37m[41m);[mi[1m[37m[46m)[m[1m[37m[41m;[m[24;66H1-35[6;35H[?12l[?25h[?25l[46m][m);][46m)[m[24;66H2-36[6;36H[?12l[?25h[?25l[24;66H3-37[6;37H[?12l[?25h[?25l[6;28H([7C)[24;66H4-38[6;38H[?12l[?25h[?25l[7;23r[7;1H[L[1;24r[24;63H[K[24;63H7,1[11CAll[7;1H[?12l[?25h[?25l[24;65H2-9[7;9H[?12l[?25h[?25l[24;65H3-17[7;17H[?12l[?25h[?25l[24;65H2-9 [7;9H[?12l[?25h[?25l[24;65H1  [7;1H[?12l[?25h[?25l[6;23r[23;1H
+[1;24r[6;17Havg += sqrt(nums[i]);[23;1H[1m[34m~                                                                               [m[24;63H[K[24;63H6,24-38[7CAll[6;38H[?12l[?25h[?25l[5;47H[46m{[7;9H}[m[24;63H7,3-10 [7;10H[?12l[?25h[?25l[8;23r[8;1H[L[1;24r[24;63H[K[24;63H8,1[11CAll[5;47H{[7;9H}
+[?12l[?25h[?25l[24;65H2-9[8;9H[?12l[?25h[?25la[24;65H3-10[8;10H[?12l[?25h[?25lv[24;65H4-11[8;11H[?12l[?25h[?25lg[24;65H5-12[8;12H[?12l[?25h[?25l[24;65H6-13[8;13H[?12l[?25h[?25l/[24;65H7-14[8;14H[?12l[?25h[?25l=[24;65H8-15[8;15H[?12l[?25h[?25l[24;65H9-16[8;16H[?12l[?25h[?25ln[24;65H10-17[8;17H[?12l[?25h[?25lu[24;66H1-18[8;18H[?12l[?25h[?25lm[24;66H2-19[8;19H[?12l[?25h[?25ls[24;66H3-20[8;20H[?12l[?25h[?25l.[24;66H4-21[8;21H[?12l[?25h[?25ll[24;66H5-22[8;22H[?12l[?25h[?25le[24;66H6-23[8;23H[?12l[?25h[?25ln[24;66H7-24[8;24H[?12l[?25h[?25lg[24;66H8-25[8;25H[?12l[?25h[?25lt[24;66H9-26[8;26H[?12l[?25h[?25lh[24;65H20-27[8;27H[?12l[?25h[?25l;[24;66H1-28[8;28H[?12l[?25h[?25l[9;23r[9;1H[L[1;24r[24;63H[K[24;63H9,1[11CAll[9;1H[?12l[?25h[?25l[24;65H2-9[9;9H[?12l[?25h[?25lr[24;65H3-10[9;10H[?12l[?25h[?25le[24;65H4-11[9;11H[?12l[?25h[?25lt[24;65H5-12[9;12H[?12l[?25h[?25lu[24;65H6-13[9;13H[?12l[?25h[?25lr[24;65H7-14[9;14H[?12l[?25h[?25l[33mreturn[m[24;65H8-15[9;15H[?12l[?25h[?25l[24;65H9-16[9;16H[?12l[?25h[?25la[24;65H10-17[9;17H[?12l[?25h[?25lv[24;66H1-18[9;18H[?12l[?25h[?25lg[24;66H2-19[9;19H[?12l[?25h[?25l;[24;66H3-20[9;20H[?12l[?25h[?25l[24;63H8[8;20H[?12l[?25h[?25l[24;66H4-21[8;21H[?12l[?25h[?25l[24;66H5-22[8;22H[?12l[?25h[?25l[24;66H6-23[8;23H[?12l[?25h[?25l[24;66H7-24[8;24H[?12l[?25h[?25l[24;66H8-25[8;25H[?12l[?25h[?25l[24;66H9-26[8;26H[?12l[?25h[?25l[24;65H20-27[8;27H[?12l[?25h[?25l[24;66H1-28[8;28H[?12l[?25h[?25l[9;23r[9;1H[L[1;24r[24;63H[K[24;63H9,1[11CAll[9;1H[?12l[?25h[?25l[24;65H2-9[9;9H[?12l[?25h[?25lp[24;65H3-10[9;10H[?12l[?25h[?25lr[24;65H4-11[9;11H[?12l[?25h[?25li[24;65H5-12[9;12H[?12l[?25h[?25ln[24;65H6-13[9;13H[?12l[?25h[?25lt[24;65H7-14[9;14H[?12l[?25h[?25lf[24;65H8-15[9;15H[?12l[?25h[?25l([24;65H9-16[9;16H[?12l[?25h[?25la[24;65H10-17[9;17H[?12l[?25h[?25lv[24;66H1-18[9;18H[?12l[?25h[?25lg[24;66H2-19[9;19H[?12l[?25h[?25l)[46m([mavg[46m)[m[24;66H3-20[9;20H[?12l[?25h[?25l;(avg)[24;66H4-21[9;21H[?12l[?25h[?25l[24;1H[K[24;63H9,13-20[7CAll[9;20H[?12l[?25h[?25l[46m([mavg[46m)[m[24;66H2-19[9;19H[?12l[?25h[?25l(avg)[24;63H10,12-19[10;19H[?12l[?25h[?25l[9;15H[46m([mavg[46m)[m[24;63H9,12-19 [9;19H[?12l[?25h[?25l(avg)[24;66H1-18[9;18H[?12l[?25h[?25l[24;66H0-17[9;17H[?12l[?25h[?25l[24;65H9-16 [9;16H[?12l[?25h[?25l[24;1H[1m-- INSERT --[m[24;63H[K[24;63H9,10-17[7CAll[9;17H[?12l[?25h[?25l[24;66H1-18[9;18H[?12l[?25h[?25l[46m([mavg[46m)[m[24;66H2-19[9;19H[?12l[?25h[?25l)[46m;[m[9;20H[K[9;18H[46m)[m;[24;66H1-18[9;18H[?12l[?25h[?25l)[46m;[m[9;19H[K[9;17H[46m)[m;[24;66H0-17[9;17H[?12l[?25h[?25l)[46m;[m[9;18H[K[9;16H[46m)[m;[24;65H9-16 [9;16H[?12l[?25h[?25l[31m[46m"[m[31m);
+        return avg;
+}[9;16H"[m[31m[46m)[m[24;65H10-17[9;17H[?12l[?25h[?25l[31m[46m%[m[31m);%[m[31m[46m)[m[24;66H1-18[9;18H[?12l[?25h[?25l[31m[46ml[m[31m);l[m[31m[46m)[m[24;66H2-19[9;19H[?12l[?25h[?25l[35m%l[m[35m[46mf[m[31m);[m[35mf[m[31m[46m)[m[24;66H3-20[9;20H[?12l[?25h[?25l[31m[46m"[m);
+        [33mreturn[m avg;
+}[9;20H[31m"[m[46m)[m[24;66H4-21[9;21H[?12l[?25h[?25l[46m,[m);,[46m)[m[24;66H5-22[9;22H[?12l[?25h[?25l[46m [m); [46m)[m[24;66H6-23[9;23H[?12l[?25h[?25l[46ma[m);a[46m)[m[24;66H7-24[9;24H[?12l[?25h[?25l[46mv[m);v[46m)[m[24;66H8-25[9;25H[?12l[?25h[?25l[46mg[m);g[46m)[m[24;66H9-26[9;26H[?12l[?25h[?25l[24;65H20-27[9;27H[?12l[?25h[?25l[9;15H([10C)[24;66H1-28[9;28H[?12l[?25h[?25l[24;63H8[8;28H[?12l[?25h[?25l[24;66H0-27[8;27H[?12l[?25h[?25l;[8;27H[K[24;65H19-26[8;26H[?12l[?25h[?25l;[8;26H[K[24;66H8-25[8;25H[?12l[?25h[?25l;[8;25H[K[24;66H7-24[8;24H[?12l[?25h[?25l;[8;24H[K[24;66H6-23[8;23H[?12l[?25h[?25l;[8;23H[K[24;66H5-22[8;22H[?12l[?25h[?25l;[8;22H[K[24;66H4-21[8;21H[?12l[?25h[?25l;[8;21H[K[24;66H3-20[8;20H[?12l[?25h[?25l;[8;20H[K[24;66H2-19[8;19H[?12l[?25h[?25l;[8;19H[K[24;66H1-18[8;18H[?12l[?25h[?25l;[8;18H[K[24;66H0-17[8;17H[?12l[?25h[?25l;[8;17H[K[24;65H9-16 [8;16H[?12l[?25h[?25l[31m1[m;[24;65H10-17[8;17H[?12l[?25h[?25l[31m0[m;[24;66H1-18[8;18H[?12l[?25h[?25l[5;47H[46m{[7;9H}[m[24;63H7,3-10 [7;10H[?12l[?25h[?25l[5;47H{[7;9H}[24;63H6,2-9 [6;9H[?12l[?25h[?25l[24;65H3-17[6;17H[?12l[?25h[?25l[24;65H4-18[6;18H[?12l[?25h[?25l[24;65H5-19[6;19H[?12l[?25h[?25l[24;65H6-20[6;20H[?12l[?25h[?25l[24;65H7-21[6;21H[?12l[?25h[?25l[24;65H8-22[6;22H[?12l[?25h[?25l[24;65H9-23[6;23H[?12l[?25h[?25l[24;65H10-24[6;24H[?12l[?25h[?25l[24;66H1-25[6;25H[?12l[?25h[?25l[24;66H2-26[6;26H[?12l[?25h[?25l[24;66H3-27[6;27H[?12l[?25h[?25lt[46m([7C)[m[24;66H4-28[6;28H[?12l[?25h[?25l[24;66H5-29[6;29H[?12l[?25h[?25l([7C)[24;66H6-30[6;30H[?12l[?25h[?25l[24;66H7-31[6;31H[?12l[?25h[?25l[24;66H8-32[6;32H[?12l[?25h[?25ls[46m[[mi[46m][m[24;66H9-33[6;33H[?12l[?25h[?25l[24;65H20-34[6;34H[?12l[?25h[?25l[24;66H1-35[6;35H[?12l[?25h[?25l[6;28H[46m([mnums[i][46m)[m[24;66H2-36[6;36H[?12l[?25h[?25l[6;28H([7C)[24;63H5,29[5;36H[?12l[?25h[?25l[24;65H30-37[5;37H[?12l[?25h[?25l[24;66H1-38[5;38H[?12l[?25h[?25l[24;66H2-39[5;39H[?12l[?25h[?25l[24;66H3-40[5;40H[?12l[?25h[?25l; i++) {[5;47H[K[24;66H2-39[5;39H[?12l[?25h[?25l; i++) {[5;46H[K[24;66H1-38[5;38H[?12l[?25h[?25l; i++) {[5;45H[K[24;66H0-37[5;37H[?12l[?25h[?25l; i++) {[5;44H[K[24;65H29-36[5;36H[?12l[?25h[?25l; i++) {[5;43H[K[24;66H8-35[5;35H[?12l[?25h[?25l; i++) {[5;42H[K[24;66H7-34[5;34H[?12l[?25h[?25l; i++) {[5;41H[K[24;66H6-33[5;33H[?12l[?25h[?25l; i++) {[5;40H[K[24;66H5-32[5;32H[?12l[?25h[?25l; i++) {[5;39H[K[24;66H4-31[5;31H[?12l[?25h[?25l; i++) {[5;38H[K[24;66H3-30[5;30H[?12l[?25h[?25l; i++) {[5;37H[K[24;66H2-29[5;29H[?12l[?25h[?25l; i++) {[5;36H[K[24;66H1-28[5;28H[?12l[?25h[?25l ; i++) {[24;66H2-29[5;29H[?12l[?25h[?25l[31m1[m; i++) {[24;66H3-30[5;30H[?12l[?25h[?25l[31m0[m; i++) {[24;66H4-31[5;31H[?12l[?25h[?25l[24;63H4,17-24[4;24H[?12l[?25h[?25l[24;63H5,24-31[5;31H[?12l[?25h[?25l[24;63H6,17[6;31H[?12l[?25h[?25l[5;38H[46m{[7;9H}[m[24;63H7,3-10 [7;10H[?12l[?25h[24;1H[K[7;9H[?25l[24;63H7,2-9[9CAll[7;9H[?12l[?25h[?25l[24;63H[K[24;1H:[?12l[?25hs[?25l[?12l[?25hq[?25l[?12l[?25h[?25l[24;3H[K[24;3H[?12l[?25hq[?25l[?12l[?25h[?25l[24;3H[K[24;3H[?12l[?25h[?25l[24;2H[K[24;2H[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"simple.c" 11L, 207C written
+[?1l>[?12l[?25h[?1049l]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# gcc -g -o[Klm -o simple simple.c
+simple.c: In function ‘main’:
+simple.c:5: error: ‘for’ loop initial declarations are only allowed in C99 mode
+simple.c:5: note: use option -std=c99 or -std=gnu99 to compile your code
+simple.c:6: warning: incompatible implicit declaration of built-in function ‘sqrt’
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+commands.script  cpuinfo.txt  interrupts.txt  lspci.txt  meminfo.txt  simple.c
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# lsgcc -g -lm -o simple simple.c[1@-[C[1@s[1@t[1@d[1@=[1@c[1@9[1@9[1@ 
+gcc: simple: No such file or directory
+simple.c: In function ‘main’:
+simple.c:5: error: ‘for’ loop initial declarations are only allowed in C99 mode
+simple.c:5: note: use option -std=c99 or -std=gnu99 to compile your code
+simple.c:6: warning: incompatible implicit declaration of built-in function ‘sqrt’
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+commands.script  cpuinfo.txt  interrupts.txt  lspci.txt  meminfo.txt  simple.c
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# lsgcc -g -lm -o -std=c99 simple simple.c[1P[1P[1P[1@g[1@n[1@u[1@9[1@9[C
+gcc: simple: No such file or directory
+simple.c: In function ‘main’:
+simple.c:5: error: ‘for’ loop initial declarations are only allowed in C99 mode
+simple.c:5: note: use option -std=c99 or -std=gnu99 to compile your code
+simple.c:6: warning: incompatible implicit declaration of built-in function ‘sqrt’
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+commands.script  cpuinfo.txt  interrupts.txt  lspci.txt  meminfo.txt  simple.c
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# vim simple.c
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"simple.c" 11L, 207C[>c[1;1H[35m#include [m[31m<stdio.h>[m
+[32mint[m main() {[3;9H[32mint[m nums[[31m10[m] = {[31m1[m, [31m3[m, [31m4[m, [31m5[m, [31m6[m, [31m7[m, [31m9[m, [31m11[m, [31m12[m, [31m15[m};[4;9H[32mdouble[m avg = [31m0[m;[5;9H[33mfor[m ([32mint[m i = [31m0[m; i < [31m10[m; i++) [46m{[m[6;17Havg += sqrt(nums[i]);[7;9H[46m}[m[8;9Havg /= [31m10[m;[9;9Hprintf([31m"[m[35m%lf[m[31m"[m, avg);[10;9H[33mreturn[m avg;
+}
+[1m[34m~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H7,2-9[9CAll[7;9H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[5;38H{[7;9H}[24;63H6,2-16[6;16H[?12l[?25h[?25l[24;63H5,2-9 [5;9H[?12l[?25h[?25l[24;63H4[4;9H[?12l[?25h[?25l[24;63H3[3;9H[?12l[?25h[?25l[2;9H[46m()[m[24;63H2,9  [2;9H[?12l[?25h[?25l()[24;63H1[1;9H[?12l[?25h[?25l[24;65H10[1;10H[?12l[?25h[?25l[24;66H1[1;11H[?12l[?25h[?25l[24;66H2[1;12H[?12l[?25h[?25l[24;66H3[1;13H[?12l[?25h[?25l[24;66H4[1;14H[?12l[?25h[?25l[24;66H5[1;15H[?12l[?25h[?25l[24;66H6[1;16H[?12l[?25h[?25l[24;66H7[1;17H[?12l[?25h[?25l[24;66H8[1;18H[?12l[?25h[?25l[24;63H2,1 [2;1H[?12l[?25h[?25l[24;1H[1m-- INSERT --[m[24;13H[K[24;63H2,2[11CAll[2;2H[?12l[?25h[?25l[24;65H1[2;1H[?12l[?25h[?25l[24;65H2[2;2H[?12l[?25h[?25l[24;63H1[1;2H[?12l[?25h[?25l[24;65H3[1;3H[?12l[?25h[?25l[24;65H4[1;4H[?12l[?25h[?25l[24;65H5[1;5H[?12l[?25h[?25l[24;65H6[1;6H[?12l[?25h[?25l[24;65H7[1;7H[?12l[?25h[?25l[24;65H8[1;8H[?12l[?25h[?25l[24;65H9[1;9H[?12l[?25h[?25l[24;65H10[1;10H[?12l[?25h[?25l[24;66H1[1;11H[?12l[?25h[?25l[24;66H2[1;12H[?12l[?25h[?25l[24;66H3[1;13H[?12l[?25h[?25l[24;66H4[1;14H[?12l[?25h[?25l[24;66H5[1;15H[?12l[?25h[?25l[24;66H6[1;16H[?12l[?25h[?25l[24;66H7[1;17H[?12l[?25h[?25l[24;66H8[1;18H[?12l[?25h[?25l[24;66H9[1;19H[?12l[?25h[?25l[2;23r[2;1H[L[1;24r[24;63H[K[24;63H2,1[11CAll[2;1H[?12l[?25h[?25l#[24;65H2[2;2H[?12l[?25h[?25li[24;65H3[2;3H[?12l[?25h[?25ln[24;65H4[2;4H[?12l[?25h[?25lc[24;65H5[2;5H[?12l[?25h[?25ll[24;65H6[2;6H[?12l[?25h[?25lu[24;65H7[2;7H[?12l[?25h[?25ld[24;65H8[2;8H[?12l[?25h[?25le[24;65H9[2;9H[?12l[?25h[?25l[24;65H10[2;10H[?12l[?25h[?25l>[24;66H1[2;11H[?12l[?25h[?25l[2;10H[K[24;66H0[2;10H[?12l[?25h[?25l[35m#include <[m[24;66H1[2;11H[?12l[?25h[?25lm[24;66H2[2;12H[?12l[?25h[?25la[24;66H3[2;13H[?12l[?25h[?25lt[24;66H4[2;14H[?12l[?25h[?25lh[24;66H5[2;15H[?12l[?25h[?25l.[24;66H6[2;16H[?12l[?25h[?25lh[24;66H7[2;17H[?12l[?25h[?25l[2;10H[31m<math.h>[m[24;66H8[2;18H[?12l[?25h[?25l[3;23r[3;1H[L[1;24r[24;63H[K[24;63H3,1[11CAll[3;1H[?12l[?25h[24;1H[K[3;1H[?25l[24;63H3,0-1[9CAll[3;1H[?12l[?25h[?25l[24;63H[K[24;1H:[?12l[?25hw[?25l[?12l[?25hz[?25l[?12l[?25h[?25l[24;3H[K[24;3H[?12l[?25hq[?25l[?12l[?25h[?25l"simple.c" 13L, 226C written
+[?1l>[?12l[?25h[?1049l]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# vim simple.c
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"simple.c" 13L, 226C[>c[1;1H[35m#include [m[31m<stdio.h>[m
+[35m#include [m[31m<math.h>[m
+
+[32mint[m main() {[5;9H[32mint[m nums[[31m10[m] = {[31m1[m, [31m3[m, [31m4[m, [31m5[m, [31m6[m, [31m7[m, [31m9[m, [31m11[m, [31m12[m, [31m15[m};[6;9H[32mdouble[m avg = [31m0[m;[7;9H[33mfor[m ([32mint[m i = [31m0[m; i < [31m10[m; i++) {[8;17Havg += sqrt(nums[i]);[9;9H}[10;9Havg /= [31m10[m;[11;9Hprintf([31m"[m[35m%lf[m[31m"[m, avg);[12;9H[33mreturn[m avg;
+}
+[1m[34m~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H3,0-1[9CAll[3;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[24;63H4,1  [4;1H[?12l[?25h[?25l[24;63H5,1-8[5;8H[?12l[?25h[?25l[24;63H6[6;8H[?12l[?25h[?25l[24;65H2-9[6;9H[?12l[?25h[?25l[24;65H3-10[6;10H[?12l[?25h[?25l[24;65H4-11[6;11H[?12l[?25h[?25l[24;65H5-12[6;12H[?12l[?25h[?25l[24;65H6-13[6;13H[?12l[?25h[?25l[24;65H7-14[6;14H[?12l[?25h[?25l[24;65H8-15[6;15H[?12l[?25h[?25l[24;65H9-16[6;16H[?12l[?25h[?25l[24;65H10-17[6;17H[?12l[?25h[?25l[24;66H1-18[6;18H[?12l[?25h[?25l[24;66H2-19[6;19H[?12l[?25h[?25l[24;66H3-20[6;20H[?12l[?25h[?25l[24;66H4-21[6;21H[?12l[?25h[?25l[24;66H5-22[6;22H[?12l[?25h[?25l[24;66H6-23[6;23H[?12l[?25h[?25l[24;63H7,2-9  [7;9H[?12l[?25h[?25l[24;1H[1m-- INSERT --[m[24;13H[K[24;63H7,3-10[8CAll[7;10H[?12l[?25h[?25l[24;63H6[6;10H[?12l[?25h[?25l[24;65H4-11[6;11H[?12l[?25h[?25l[24;65H5-12[6;12H[?12l[?25h[?25l[24;65H6-13[6;13H[?12l[?25h[?25l[24;65H7-14[6;14H[?12l[?25h[?25l[24;65H8-15[6;15H[?12l[?25h[?25l[24;65H9-16[6;16H[?12l[?25h[?25l[24;65H10-17[6;17H[?12l[?25h[?25l[24;66H1-18[6;18H[?12l[?25h[?25l[24;66H2-19[6;19H[?12l[?25h[?25l[24;66H3-20[6;20H[?12l[?25h[?25l[24;66H4-21[6;21H[?12l[?25h[?25l[24;66H5-22[6;22H[?12l[?25h[?25l[24;66H6-23[6;23H[?12l[?25h[?25l[24;66H7-24[6;24H[?12l[?25h[?25l[7;23r[7;1H[L[1;24r[24;63H[K[24;63H7,1[11CAll[7;1H[?12l[?25h[?25l[24;65H2-9[7;9H[?12l[?25h[?25li[24;65H3-10[7;10H[?12l[?25h[?25ln[24;65H4-11[7;11H[?12l[?25h[?25l[32mint[m[24;65H5-12[7;12H[?12l[?25h[?25l[24;65H6-13[7;13H[?12l[?25h[?25li[24;65H7-14[7;14H[?12l[?25h[?25l;[24;65H8-15[7;15H[?12l[?25h[?25l[24;63H8[8;15H[?12l[?25h[?25l[24;65H9-16[8;16H[?12l[?25h[?25l[24;65H10-17[8;17H[?12l[?25h[?25l[24;66H1-18[8;18H[?12l[?25h[?25linti = [31m0[m; i < [31m10[m; i++) {[8;38H[K[24;66H0-17[8;17H[?12l[?25h[?25li = [31m0[m; i < [31m10[m; i++) {[8;37H[K[24;65H9-16 [8;16H[?12l[?25h[?25li = [31m0[m; i < [31m10[m; i++) {[8;36H[K[24;65H8-15[8;15H[?12l[?25h[?25l = [31m0[m; i < [31m10[m; i++) {[8;35H[K[8;13H[46m([18C)[m[24;65H7-14[8;14H[?12l[?25h[?25l([18C)[24;63H7[7;14H[?12l[?25h[?25l[24;65H8-15[7;15H[?12l[?25h[24;1H[K[7;14H[?25l[24;63H7,7-14[8CAll[7;14H[?12l[?25h[?25l[24;63H[K[24;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"simple.c" 14L, 230C written
+[?1l>[?12l[?25h[?1049l]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# vim simple.cls[Kgcc -g -lm -o -std=gnu99 simple simple.c[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# man ldd
+Formatting page, please wait...
+[?1049h[?1h=LDD(1)                     Linux Programmer’s Manual                    LDD(1)
+
+[1mNAME[0m
+       ldd - print shared library dependencies
+
+[1mSYNOPSIS[0m
+       [1mldd[0m [OPTION]... FILE...
+
+[1mDESCRIPTION[0m
+       [1mldd[0m  prints  the  shared  libraries  required by each program or shared
+       library specified on the command line.
+
+[1mOPTIONS[0m
+       [1m--version[0m
+              Print the version number of [1mldd[0m.
+
+       [1m-v[0m [1m--verbose[0m
+              Print all information, including, for example, symbol versioning
+              information.
+
+       [1m-u[0m [1m--unused[0m
+              Print unused direct dependencies.  (Since glibc 2.3.4.)
+
+:[K[K       [1m-d[0m [1m--data-relocs[0m
+              Perform relocations and report any missing objects (ELF only).
+
+       [1m-r[0m [1m--function-relocs[0m
+              Perform  relocations  for  both  data objects and functions, and
+              report any missing objects or functions (ELF only).
+
+       [1m--help[0m Usage information.
+
+[1mNOTES[0m
+       The standard version of [1mldd[0m comes with  glibc2.   Libc5  came  with  an
+       older version, still present on some systems.  The long options are not
+       supported by the libc5 version.  On the other hand, the glibc2  version
+       does not support [1m-V[0m and only has the equivalent [1m--version[0m.
+
+       The  libc5 version of this program will use the name of a library given
+       on the command line as-is when it contains a '/'; otherwise it searches
+       for  the  library  in  the  standard  locations.  To run it on a shared
+       library in the current directory, prefix the name with "./".
+
+[1mBUGS[0m
+       [1mldd[0m does not work on a.out shared libraries.
+
+:[K[K       [1mldd[0m does not work with some extremely old  a.out  programs  which  were
+       built  before  [1mldd[0m  support was added to the compiler releases.  If you
+       use [1mldd[0m on one of these programs, the program will attempt to run  with
+       [4margc[24m = 0 and the results will be unpredictable.
+
+[1mSEE[0m [1mALSO[0m
+       [1mld.so[0m(8), [1mldconfig[0m(8)
+
+[1mCOLOPHON[0m
+       This  page  is  part of release 3.22 of the Linux [4mman-pages[24m project.  A
+       description of the project, and information about reporting  bugs,  can
+       be found at http://www.kernel.org/doc/man-pages/.
+
+                                  2000-10-30                            LDD(1)
+[7m(END) [27m[K[K[K[7m(END) [27m[K[K [KESCESC[K^J^J[K[7m(END) [27m[K[K[?1l>[?1049l
+[2]+  Stopped                 man ldd
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ldd simple
+	linux-gate.so.1 =>  (0x0091f000)
+	libm.so.6 => /lib/libm.so.6 (0x00aeb000)
+	libc.so.6 => /lib/libc.so.6 (0x00923000)
+	/lib/ld-linux.so.2 (0x008fc000)
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# simplke
+bash: simplke: command not found
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# simple
+bash: simple: command not found
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# file simple
+simple: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.18, not stripped
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# gdb simple
+[?1034hGNU gdb (GDB) Red Hat Enterprise Linux (7.2-92.el6)
+Copyright (C) 2010 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "i686-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /home/Connor/Documents/comp3500/project1/simple...done.
+(gdb) simple
+Undefined command: "simple".  Try "help".
+(gdb) file simple
+Load new symbol table from "/home/Connor/Documents/comp3500/project1/simple"? (y or n) help    y
+Reading symbols from /home/Connor/Documents/comp3500/project1/simple...done.
+(gdb) simple
+Undefined command: "simple".  Try "help".
+(gdb) help
+List of classes of commands:
+
+aliases -- Aliases of other commands
+breakpoints -- Making program stop at certain points
+data -- Examining data
+files -- Specifying and examining files
+internals -- Maintenance commands
+obscure -- Obscure features
+running -- Running the program
+stack -- Examining the stack
+status -- Status inquiries
+support -- Support facilities
+tracepoints -- Tracing of program execution without stopping the program
+user-defined -- User-defined commands
+
+Type "help" followed by a class name for a list of commands in that class.
+Type "help all" for the list of all commands.
+Type "help" followed by command name for full documentation.
+Type "apropos word" to search for commands related to "word".
+Command name abbreviations are allowed if unambiguous.
+(gdb) run simple
+Starting program: /home/Connor/Documents/comp3500/project1/simple simple
+2.571707
+Program exited with code 02.
+Missing separate debuginfos, use: debuginfo-install glibc-2.12-1.212.el6_10.3.i686
+(gdb) ^Z
+[3]+  Stopped                 gdb simple
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# touch .gdbinit
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+commands.script  interrupts.txt  meminfo.txt  simple.c
+cpuinfo.txt      lspci.txt       [0m[01;32msimple[0m
+[m]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# touch .[Kvim .gdbinit
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+commands.script  interrupts.txt  meminfo.txt  simple.c
+cpuinfo.txt      lspci.txt       [0m[01;32msimple[0m       vim
+[m]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# rm vim
+rm: remove regular empty file `vim'? y
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# vim gdbinit[K[K[K[K[K[K[K.gdbinit
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H".gdbinit" 0L, 0C[>c[2;1H[1m[34m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H0,0-1[9CAll[1;1H[?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[24;1H[1m-- INSERT --[m[24;13H[K[24;63H0,1[11CAll[1;1H[?12l[?25h[?25lf[24;63H1,2[1;2H[?12l[?25h[?25li[24;65H3[1;3H[?12l[?25h[?25ll[24;65H4[1;4H[?12l[?25h[?25l[33mfile[m[24;65H5[1;5H[?12l[?25h[?25l[24;65H6[1;6H[?12l[?25h[?25ls[24;65H7[1;7H[?12l[?25h[?25li[24;65H8[1;8H[?12l[?25h[?25lm[24;65H9[1;9H[?12l[?25h[?25lp[24;65H10[1;10H[?12l[?25h[?25ll[24;66H1[1;11H[?12l[?25h[?25le[24;66H2[1;12H[?12l[?25h[?25l[2;1H[K[24;63H2,1 [2;1H[?12l[?25h[?25lb[24;65H2[2;2H[?12l[?25h[?25lr[24;65H3[2;3H[?12l[?25h[?25le[24;65H4[2;4H[?12l[?25h[?25la[24;65H5[2;5H[?12l[?25h[?25l[33mbreak[m[24;65H6[2;6H[?12l[?25h[?25l[24;65H7[2;7H[?12l[?25h[?25lm[24;65H8[2;8H[?12l[?25h[?25la[24;65H9[2;9H[?12l[?25h[?25li[24;65H10[2;10H[?12l[?25h[?25ln[24;66H1[2;11H[?12l[?25h[?25l[3;1H[K[24;63H3,1 [3;1H[?12l[?25h[?25lb[24;65H2[3;2H[?12l[?25h[?25lr[24;65H3[3;3H[?12l[?25h[?25le[24;65H4[3;4H[?12l[?25h[?25la[24;65H5[3;5H[?12l[?25h[?25l[33mbreak[m[24;65H6[3;6H[?12l[?25h[?25l[24;65H7[3;7H[?12l[?25h[?25ls[24;65H8[3;8H[?12l[?25h[?25lq[24;65H9[3;9H[?12l[?25h[?25lr[24;65H10[3;10H[?12l[?25h[?25lt[24;66H1[3;11H[?12l[?25h[?25l[4;1H[K[24;63H4,1 [4;1H[?12l[?25h[?25li[24;65H2[4;2H[?12l[?25h[?25ln[24;65H3[4;3H[?12l[?25h[?25lf[24;65H4[4;4H[?12l[?25h[?25l[33minfo[m[24;65H5[4;5H[?12l[?25h[?25l[24;65H6[4;6H[?12l[?25h[?25lr[24;65H7[4;7H[?12l[?25h[?25le[24;65H8[4;8H[?12l[?25h[?25lg[24;65H9[4;9H[?12l[?25h[?25li[24;65H10[4;10H[?12l[?25h[?25ls[24;66H1[4;11H[?12l[?25h[?25lt[24;66H2[4;12H[?12l[?25h[?25le[24;66H3[4;13H[?12l[?25h[?25lr[24;66H4[4;14H[?12l[?25h[?25l[4;6H[32mregisters[m[24;66H5[4;15H[?12l[?25h[24;1H[K[4;14H[?25l[24;63H4,14[10CAll[4;14H[?12l[?25h[?25l[24;63H[K[24;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l".gdbinit" 4L, 49C written
+[?1l>[?12l[?25h[?1049l]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# gdc[Kb
+[?1034hGNU gdb (GDB) Red Hat Enterprise Linux (7.2-92.el6)
+Copyright (C) 2010 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "i686-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+warning: File "/home/Connor/Documents/comp3500/project1/.gdbinit" auto-loading has been declined by your `auto-load safe-path' set to "/usr/share/gdb/auto-load:/usr/lib/debug:/usr/bin/mono-gdb.py".
+To enable execution of this file add
+	add-auto-load-safe-path /home/Connor/Documents/comp3500/project1/.gdbinit
+line to your configuration file "/root/.gdbinit".
+To completely disable this security protection add
+	set auto-load safe-path /
+line to your configuration file "/root/.gdbinit".
+For more information about this security protection see the
+"Auto-loading safe path" section in the GDB manual.  E.g., run from the shell:
+	info "(gdb)Auto-loading safe path"
+(gdb) gdb
+Undefined command: "gdb".  Try "help".
+(gdb) r
+Starting program:  
+No executable file specified.
+Use the "file" or "exec-file" command.
+(gdb) r[K^Z
+[4]+  Stopped                 gdb
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# script [K
+Script started, file is typescript
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[?1034h[root@localhost project1]# ./simple
+2.571707]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+commands.script  interrupts.txt  meminfo.txt  simple.c
+cpuinfo.txt      lspci.txt       [0m[01;32msimple[0m       typescript
+[m]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# vim .gdb[K[K[K[K[K[K[K[Kcat > .gdbinit
+file simple
+break main
+break sqrt
+info registers]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+commands.script  interrupts.txt  meminfo.txt  simple.c
+cpuinfo.txt      lspci.txt       [0m[01;32msimple[0m       typescript
+[m]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ./.gdbinit
+bash: ./.gdbinit: Permission denied
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# chmod a=rwx .gdbinit
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# chmod a=rwx .gdbinit[10P./.gdbinit
+simple: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.18, not stripped
+./.gdbinit: line 2: break: only meaningful in a `for', `while', or `until' loop
+./.gdbinit: line 3: break: only meaningful in a `for', `while', or `until' loop
+[?1h=[?1049h[H[2J[24;1HNo menu item `registers' in node `(dir)Top'.[1;1HFile: dir       Node: Top       This is the top of the INFO tree[3;1H  This (the Directory node) gives a menu of major topics. [4;1H  Typing "q" exits, "?" lists all Info commands, "d" returns here,[5;1H  "h" gives a primer for first-timers,[6;1H  "mEmacs<Return>" visits the Emacs topic, etc.[8;1H  In Emacs, you can click mouse button 2 on a menu item or cross reference[9;1H  to select it.[11;1H* Menu: [13;1HArchiving[14;1H* Cpio: (cpio).                 Copy-in-copy-out archiver to tape or disk.[15;1H* Tar: (tar).                   Making tape (or disk) archives.[17;1HBasics[18;1H* Common options: (coreutils)Common options.[19;1H                                Common options.[20;1H* Coreutils: (coreutils).       Core GNU (file, text, shell) utilities.[21;1H* Date input formats: (coreutils)Date input formats.[22;1H* File permissions: (coreutils)File permissions.[23;1H[7m-----Info: (dir)Top, 1992 lines --Top-------------------------------------------[0m[24;1HNo menu item `registers' in node `(dir)Top'.[24;1HNo menu item `registers' in node `(dir)Top'.[1;1H[24;1H[K[24;1HUnknown command (a).[24;1HUnknown command (a).[1;1H[24;1H[K[24;1HUnknown command (a).[24;1HUnknown command (a).[1;1H[24;1H[K[?1l>[?1049l
+[1]+  Stopped                 ./.gdbinit
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# gdb
+[?1034hGNU gdb (GDB) Red Hat Enterprise Linux (7.2-92.el6)
+Copyright (C) 2010 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "i686-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+warning: File "/home/Connor/Documents/comp3500/project1/.gdbinit" auto-loading has been declined by your `auto-load safe-path' set to "/usr/share/gdb/auto-load:/usr/lib/debug:/usr/bin/mono-gdb.py".
+To enable execution of this file add
+	add-auto-load-safe-path /home/Connor/Documents/comp3500/project1/.gdbinit
+line to your configuration file "/root/.gdbinit".
+To completely disable this security protection add
+	set auto-load safe-path /
+line to your configuration file "/root/.gdbinit".
+For more information about this security protection see the
+"Auto-loading safe path" section in the GDB manual.  E.g., run from the shell:
+	info "(gdb)Auto-loading safe path"
+(gdb) r
+Starting program:  
+No executable file specified.
+Use the "file" or "exec-file" command.
+(gdb) file simple
+Reading symbols from /home/Connor/Documents/comp3500/project1/simple...done.
+(gdb) break main
+Breakpoint 1 at 0x804844d: file simple.c, line 5.
+(gdb) break sqrt
+Breakpoint 2 at 0x8048364
+(gdb) info registers
+The program has no registers now.
+(gdb) g[Kr
+Starting program: /home/Connor/Documents/comp3500/project1/simple 
+
+Breakpoint 1, main () at simple.c:5
+5		int nums[10] = {1, 3, 4, 5, 6, 7, 9, 11, 12, 15};
+Missing separate debuginfos, use: debuginfo-install glibc-2.12-1.212.el6_10.3.i686
+(gdb) n
+6		double avg = 0;
+(gdb) s
+8		for (i = 0; i < 10; i++) {
+(gdb) c
+Continuing.
+2.571707
+Program exited with code 02.
+(gdb) ^Z
+[2]+  Stopped                 gdb
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# exit
+exit
+There are stopped jobs.
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+commands.script  interrupts.txt  meminfo.txt  simple.c
+cpuinfo.txt      lspci.txt       [0m[01;32msimple[0m       typescript
+[m]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# mv typescript debugger.script
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+commands.script  debugger.script  lspci.txt    [0m[01;32msimple[0m
+cpuinfo.txt      interrupts.txt   meminfo.txt  simple.c
+[m]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git add *.c
+fatal: Not a git repository (or any of the parent directories): .git
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ~[Kcd ~/comp3500/project1
+bash: cd: /root/comp3500/project1: No such file or directory
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# .git
+bash: .git: command not found
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git
+usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects]
+           [--bare] [--git-dir=GIT_DIR] [--work-tree=GIT_WORK_TREE]
+           [--help] COMMAND [ARGS]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and merge with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+See 'git help COMMAND' for more information on a specific command.
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git -v
+Unknown option: -v
+usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects]
+           [--bare] [--git-dir=GIT_DIR] [--work-tree=GIT_WORK_TREE]
+           [--help] COMMAND [ARGS]
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git --version
+git version 1.7.1
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# clear
+[H[2J]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git add LIS[KCENSE
+fatal: Not a git repository (or any of the parent directories): .git
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git help
+usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects]
+           [--bare] [--git-dir=GIT_DIR] [--work-tree=GIT_WORK_TREE]
+           [--help] COMMAND [ARGS]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and merge with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+See 'git help COMMAND' for more information on a specific command.
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git init
+Initialized empty Git repository in /home/Connor/Documents/comp3500/project1/.git/
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# cd
+]0;Connor@localhost:~[root@localhost ~]# ls[K[Kdir[K[K[Kls
+anaconda-ks.cfg  post-install  post-install.log
+]0;Connor@localhost:~[root@localhost ~]# cd [K[K[Kcd ..
+]0;Connor@localhost:/[root@localhost /]# dir
+bin   dev  home  lost+found  mnt  proc	sbin	 srv  tmp  var
+boot  etc  lib	 media	     opt  root	selinux  sys  usr
+]0;Connor@localhost:/[root@localhost /]# cd usr
+]0;Connor@localhost:/usr[root@localhost usr]# d[Kls
+[0m[01;34mbin[0m  [01;34metc[0m  [01;34mgames[0m  [01;34minclude[0m  [01;34mlib[0m  [01;34mlibexec[0m  [01;34mlocal[0m  [01;34msbin[0m  [01;34mshare[0m  [01;34msrc[0m  [01;36mtmp[0m
+[m]0;Connor@localhost:/usr[root@localhost usr]# cd sr[K[Kgames
+]0;Connor@localhost:/usr/games[root@localhost games]# ls
+]0;Connor@localhost:/usr/games[root@localhost games]# cd ..
+]0;Connor@localhost:/usr[root@localhost usr]# cd [K[Kd ..
+]0;Connor@localhost:/[root@localhost /]# ls
+[0m[01;34mbin[0m   [01;34mdev[0m  [01;34mhome[0m  [01;34mlost+found[0m  [01;34mmnt[0m  [01;34mproc[0m  [01;34msbin[0m     [01;34msrv[0m  [30;42mtmp[0m  [01;34mvar[0m
+[01;34mboot[0m  [01;34metc[0m  [01;34mlib[0m   [01;34mmedia[0m       [01;34mopt[0m  [01;34mroot[0m  [01;34mselinux[0m  [01;34msys[0m  [01;34musr[0m
+[m]0;Connor@localhost:/[root@localhost /]# cd ..
+]0;Connor@localhost:/[root@localhost /]# ls
+[0m[01;34mbin[0m   [01;34mdev[0m  [01;34mhome[0m  [01;34mlost+found[0m  [01;34mmnt[0m  [01;34mproc[0m  [01;34msbin[0m     [01;34msrv[0m  [30;42mtmp[0m  [01;34mvar[0m
+[01;34mboot[0m  [01;34metc[0m  [01;34mlib[0m   [01;34mmedia[0m       [01;34mopt[0m  [01;34mroot[0m  [01;34mselinux[0m  [01;34msys[0m  [01;34musr[0m
+[m]0;Connor@localhost:/[root@localhost /]# cd project1
+bash: cd: project1: No such file or directory
+]0;Connor@localhost:/[root@localhost /]# cd s[Khome
+]0;Connor@localhost:/home[root@localhost home]# ls
+[0m[01;34mConnor[0m
+[m]0;Connor@localhost:/home[root@localhost home]# cd Connor
+]0;Connor@localhost:/home/Connor[root@localhost Connor]# ls
+[0m[01;34mDesktop[0m  [01;34mDocuments[0m  [01;34mDownloads[0m  [01;34mMusic[0m  [01;34mPictures[0m  [01;34mPublic[0m  [01;34mTemplates[0m  [01;34mVideos[0m
+[m]0;Connor@localhost:/home/Connor[root@localhost Connor]# cd Documents
+]0;Connor@localhost:/home/Connor/Documents[root@localhost Documents]# ls
+[0m[01;34mcomp3500[0m
+[m]0;Connor@localhost:/home/Connor/Documents[root@localhost Documents]# cd comp3500
+]0;Connor@localhost:/home/Connor/Documents/comp3500[root@localhost comp3500]# cs[K[Kcd project1
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+commands.script  debugger.script  lspci.txt    [0m[01;32msimple[0m
+cpuinfo.txt      interrupts.txt   meminfo.txt  simple.c
+[m]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git add *.c
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git add LICENSE
+fatal: pathspec 'LICENSE' did not match any files
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git commit -m 'initial proe[Kject version'
+[master (root-commit) 4769ba8] initial project version
+ Committer: root <root@localhost.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+If the identity used for this commit is wrong, you can fix it with:
+
+    git commit --amend --author='Your Name <you@example.com>'
+
+ 1 files changed, 14 insertions(+), 0 deletions(-)
+ create mode 100644 simple.c
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git clone https://github.com/cranz[Klz/OSproject1.git
+Initialized empty Git repository in /home/Connor/Documents/comp3500/project1/OSproject1/.git/
+error:  while accessing https://github.com/cranlz/OSproject1.git/info/refs
+
+fatal: HTTP request failed
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ht[K[Kgit clone https://github.com/cranlz/OSproject1.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kls
+commands.script  debugger.script  lspci.txt    [0m[01;32msimple[0m
+cpuinfo.txt      interrupts.txt   meminfo.txt  simple.c
+[m]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# cd .git
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1/.git[root@localhost .git]# ls
+[0m[01;34mbranches[0m        config       HEAD   index  [01;34mlogs[0m     [01;34mrefs[0m
+COMMIT_EDITMSG  description  [01;34mhooks[0m  [01;34minfo[0m   [01;34mobjects[0m
+[m]0;Connor@localhost:/home/Connor/Documents/comp3500/project1/.git[root@localhost .git]# cd ..[K[K[K[K[Kpwd
+/home/Connor/Documents/comp3500/project1/.git
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1/.git[root@localhost .git]# cd [K[K[Kgit diff
+[?1h=fatal: This operation must be run in a work tree[m
+[K[?1l>]0;Connor@localhost:/home/Connor/Documents/comp3500/project1/.git[root@localhost .git]# git log
+[?1h=commit 4769ba88b33a72a50254124f47968d15be5a1c3b[m
+Author: root <root@localhost.localdomain>[m
+Date:   Thu Feb 6 22:42:52 2020 -0600[m
+[m
+    initial project version[m
+[K[?1l>]0;Connor@localhost:/home/Connor/Documents/comp3500/project1/.git[root@localhost .git]# git push
+fatal: No destination configured to push to.
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1/.git[root@localhost .git]# git help
+usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects]
+           [--bare] [--git-dir=GIT_DIR] [--work-tree=GIT_WORK_TREE]
+           [--help] COMMAND [ARGS]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and merge with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+See 'git help COMMAND' for more information on a specific command.
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1/.git[root@localhost .git]# git push ^?[K[K[K[K[K[K[K[K[K[Kcd..[K[K ..
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+commands.script  debugger.script  lspci.txt    [0m[01;32msimple[0m
+cpuinfo.txt      interrupts.txt   meminfo.txt  simple.c
+[m]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git push
+fatal: No destination configured to push to.
+]0;Connor@localhost:/home/Connor/Documen

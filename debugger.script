@@ -1,0 +1,309 @@
+Script started on Thu 06 Feb 2020 10:18:58 PM CST
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[?1034h[root@localhost project1]# ./simple
+2.571707]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+commands.script  interrupts.txt  meminfo.txt  simple.c
+cpuinfo.txt      lspci.txt       [0m[01;32msimple[0m       typescript
+[m]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# vim .gdb[K[K[K[K[K[K[K[Kcat > .gdbinit
+file simple
+break main
+break sqrt
+info registers]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+commands.script  interrupts.txt  meminfo.txt  simple.c
+cpuinfo.txt      lspci.txt       [0m[01;32msimple[0m       typescript
+[m]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ./.gdbinit
+bash: ./.gdbinit: Permission denied
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# chmod a=rwx .gdbinit
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# chmod a=rwx .gdbinit[10P./.gdbinit
+simple: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.18, not stripped
+./.gdbinit: line 2: break: only meaningful in a `for', `while', or `until' loop
+./.gdbinit: line 3: break: only meaningful in a `for', `while', or `until' loop
+[?1h=[?1049h[H[2J[24;1HNo menu item `registers' in node `(dir)Top'.[1;1HFile: dir       Node: Top       This is the top of the INFO tree[3;1H  This (the Directory node) gives a menu of major topics. [4;1H  Typing "q" exits, "?" lists all Info commands, "d" returns here,[5;1H  "h" gives a primer for first-timers,[6;1H  "mEmacs<Return>" visits the Emacs topic, etc.[8;1H  In Emacs, you can click mouse button 2 on a menu item or cross reference[9;1H  to select it.[11;1H* Menu: [13;1HArchiving[14;1H* Cpio: (cpio).                 Copy-in-copy-out archiver to tape or disk.[15;1H* Tar: (tar).                   Making tape (or disk) archives.[17;1HBasics[18;1H* Common options: (coreutils)Common options.[19;1H                                Common options.[20;1H* Coreutils: (coreutils).       Core GNU (file, text, shell) utilities.[21;1H* Date input formats: (coreutils)Date input formats.[22;1H* File permissions: (coreutils)File permissions.[23;1H[7m-----Info: (dir)Top, 1992 lines --Top-------------------------------------------[0m[24;1HNo menu item `registers' in node `(dir)Top'.[24;1HNo menu item `registers' in node `(dir)Top'.[1;1H[24;1H[K[24;1HUnknown command (a).[24;1HUnknown command (a).[1;1H[24;1H[K[24;1HUnknown command (a).[24;1HUnknown command (a).[1;1H[24;1H[K[?1l>[?1049l
+[1]+  Stopped                 ./.gdbinit
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# gdb
+[?1034hGNU gdb (GDB) Red Hat Enterprise Linux (7.2-92.el6)
+Copyright (C) 2010 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "i686-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+warning: File "/home/Connor/Documents/comp3500/project1/.gdbinit" auto-loading has been declined by your `auto-load safe-path' set to "/usr/share/gdb/auto-load:/usr/lib/debug:/usr/bin/mono-gdb.py".
+To enable execution of this file add
+	add-auto-load-safe-path /home/Connor/Documents/comp3500/project1/.gdbinit
+line to your configuration file "/root/.gdbinit".
+To completely disable this security protection add
+	set auto-load safe-path /
+line to your configuration file "/root/.gdbinit".
+For more information about this security protection see the
+"Auto-loading safe path" section in the GDB manual.  E.g., run from the shell:
+	info "(gdb)Auto-loading safe path"
+(gdb) r
+Starting program:  
+No executable file specified.
+Use the "file" or "exec-file" command.
+(gdb) file simple
+Reading symbols from /home/Connor/Documents/comp3500/project1/simple...done.
+(gdb) break main
+Breakpoint 1 at 0x804844d: file simple.c, line 5.
+(gdb) break sqrt
+Breakpoint 2 at 0x8048364
+(gdb) info registers
+The program has no registers now.
+(gdb) g[Kr
+Starting program: /home/Connor/Documents/comp3500/project1/simple 
+
+Breakpoint 1, main () at simple.c:5
+5		int nums[10] = {1, 3, 4, 5, 6, 7, 9, 11, 12, 15};
+Missing separate debuginfos, use: debuginfo-install glibc-2.12-1.212.el6_10.3.i686
+(gdb) n
+6		double avg = 0;
+(gdb) s
+8		for (i = 0; i < 10; i++) {
+(gdb) c
+Continuing.
+2.571707
+Program exited with code 02.
+(gdb) ^Z
+[2]+  Stopped                 gdb
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# exit
+exit
+There are stopped jobs.
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+commands.script  interrupts.txt  meminfo.txt  simple.c
+cpuinfo.txt      lspci.txt       [0m[01;32msimple[0m       typescript
+[m]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# mv typescript debugger.script
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+commands.script  debugger.script  lspci.txt    [0m[01;32msimple[0m
+cpuinfo.txt      interrupts.txt   meminfo.txt  simple.c
+[m]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git add *.c
+fatal: Not a git repository (or any of the parent directories): .git
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ~[Kcd ~/comp3500/project1
+bash: cd: /root/comp3500/project1: No such file or directory
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# .git
+bash: .git: command not found
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git
+usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects]
+           [--bare] [--git-dir=GIT_DIR] [--work-tree=GIT_WORK_TREE]
+           [--help] COMMAND [ARGS]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and merge with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+See 'git help COMMAND' for more information on a specific command.
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git -v
+Unknown option: -v
+usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects]
+           [--bare] [--git-dir=GIT_DIR] [--work-tree=GIT_WORK_TREE]
+           [--help] COMMAND [ARGS]
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git --version
+git version 1.7.1
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# clear
+[H[2J]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git add LIS[KCENSE
+fatal: Not a git repository (or any of the parent directories): .git
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git help
+usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects]
+           [--bare] [--git-dir=GIT_DIR] [--work-tree=GIT_WORK_TREE]
+           [--help] COMMAND [ARGS]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and merge with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+See 'git help COMMAND' for more information on a specific command.
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git init
+Initialized empty Git repository in /home/Connor/Documents/comp3500/project1/.git/
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# cd
+]0;Connor@localhost:~[root@localhost ~]# ls[K[Kdir[K[K[Kls
+anaconda-ks.cfg  post-install  post-install.log
+]0;Connor@localhost:~[root@localhost ~]# cd [K[K[Kcd ..
+]0;Connor@localhost:/[root@localhost /]# dir
+bin   dev  home  lost+found  mnt  proc	sbin	 srv  tmp  var
+boot  etc  lib	 media	     opt  root	selinux  sys  usr
+]0;Connor@localhost:/[root@localhost /]# cd usr
+]0;Connor@localhost:/usr[root@localhost usr]# d[Kls
+[0m[01;34mbin[0m  [01;34metc[0m  [01;34mgames[0m  [01;34minclude[0m  [01;34mlib[0m  [01;34mlibexec[0m  [01;34mlocal[0m  [01;34msbin[0m  [01;34mshare[0m  [01;34msrc[0m  [01;36mtmp[0m
+[m]0;Connor@localhost:/usr[root@localhost usr]# cd sr[K[Kgames
+]0;Connor@localhost:/usr/games[root@localhost games]# ls
+]0;Connor@localhost:/usr/games[root@localhost games]# cd ..
+]0;Connor@localhost:/usr[root@localhost usr]# cd [K[Kd ..
+]0;Connor@localhost:/[root@localhost /]# ls
+[0m[01;34mbin[0m   [01;34mdev[0m  [01;34mhome[0m  [01;34mlost+found[0m  [01;34mmnt[0m  [01;34mproc[0m  [01;34msbin[0m     [01;34msrv[0m  [30;42mtmp[0m  [01;34mvar[0m
+[01;34mboot[0m  [01;34metc[0m  [01;34mlib[0m   [01;34mmedia[0m       [01;34mopt[0m  [01;34mroot[0m  [01;34mselinux[0m  [01;34msys[0m  [01;34musr[0m
+[m]0;Connor@localhost:/[root@localhost /]# cd ..
+]0;Connor@localhost:/[root@localhost /]# ls
+[0m[01;34mbin[0m   [01;34mdev[0m  [01;34mhome[0m  [01;34mlost+found[0m  [01;34mmnt[0m  [01;34mproc[0m  [01;34msbin[0m     [01;34msrv[0m  [30;42mtmp[0m  [01;34mvar[0m
+[01;34mboot[0m  [01;34metc[0m  [01;34mlib[0m   [01;34mmedia[0m       [01;34mopt[0m  [01;34mroot[0m  [01;34mselinux[0m  [01;34msys[0m  [01;34musr[0m
+[m]0;Connor@localhost:/[root@localhost /]# cd project1
+bash: cd: project1: No such file or directory
+]0;Connor@localhost:/[root@localhost /]# cd s[Khome
+]0;Connor@localhost:/home[root@localhost home]# ls
+[0m[01;34mConnor[0m
+[m]0;Connor@localhost:/home[root@localhost home]# cd Connor
+]0;Connor@localhost:/home/Connor[root@localhost Connor]# ls
+[0m[01;34mDesktop[0m  [01;34mDocuments[0m  [01;34mDownloads[0m  [01;34mMusic[0m  [01;34mPictures[0m  [01;34mPublic[0m  [01;34mTemplates[0m  [01;34mVideos[0m
+[m]0;Connor@localhost:/home/Connor[root@localhost Connor]# cd Documents
+]0;Connor@localhost:/home/Connor/Documents[root@localhost Documents]# ls
+[0m[01;34mcomp3500[0m
+[m]0;Connor@localhost:/home/Connor/Documents[root@localhost Documents]# cd comp3500
+]0;Connor@localhost:/home/Connor/Documents/comp3500[root@localhost comp3500]# cs[K[Kcd project1
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+commands.script  debugger.script  lspci.txt    [0m[01;32msimple[0m
+cpuinfo.txt      interrupts.txt   meminfo.txt  simple.c
+[m]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git add *.c
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git add LICENSE
+fatal: pathspec 'LICENSE' did not match any files
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git commit -m 'initial proe[Kject version'
+[master (root-commit) 4769ba8] initial project version
+ Committer: root <root@localhost.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+If the identity used for this commit is wrong, you can fix it with:
+
+    git commit --amend --author='Your Name <you@example.com>'
+
+ 1 files changed, 14 insertions(+), 0 deletions(-)
+ create mode 100644 simple.c
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git clone https://github.com/cranz[Klz/OSproject1.git
+Initialized empty Git repository in /home/Connor/Documents/comp3500/project1/OSproject1/.git/
+error:  while accessing https://github.com/cranlz/OSproject1.git/info/refs
+
+fatal: HTTP request failed
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ht[K[Kgit clone https://github.com/cranlz/OSproject1.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kls
+commands.script  debugger.script  lspci.txt    [0m[01;32msimple[0m
+cpuinfo.txt      interrupts.txt   meminfo.txt  simple.c
+[m]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# cd .git
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1/.git[root@localhost .git]# ls
+[0m[01;34mbranches[0m        config       HEAD   index  [01;34mlogs[0m     [01;34mrefs[0m
+COMMIT_EDITMSG  description  [01;34mhooks[0m  [01;34minfo[0m   [01;34mobjects[0m
+[m]0;Connor@localhost:/home/Connor/Documents/comp3500/project1/.git[root@localhost .git]# cd ..[K[K[K[K[Kpwd
+/home/Connor/Documents/comp3500/project1/.git
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1/.git[root@localhost .git]# cd [K[K[Kgit diff
+[?1h=fatal: This operation must be run in a work tree[m
+[K[?1l>]0;Connor@localhost:/home/Connor/Documents/comp3500/project1/.git[root@localhost .git]# git log
+[?1h=commit 4769ba88b33a72a50254124f47968d15be5a1c3b[m
+Author: root <root@localhost.localdomain>[m
+Date:   Thu Feb 6 22:42:52 2020 -0600[m
+[m
+    initial project version[m
+[K[?1l>]0;Connor@localhost:/home/Connor/Documents/comp3500/project1/.git[root@localhost .git]# git push
+fatal: No destination configured to push to.
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1/.git[root@localhost .git]# git help
+usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects]
+           [--bare] [--git-dir=GIT_DIR] [--work-tree=GIT_WORK_TREE]
+           [--help] COMMAND [ARGS]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and merge with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+See 'git help COMMAND' for more information on a specific command.
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1/.git[root@localhost .git]# git push ^?[K[K[K[K[K[K[K[K[K[Kcd..[K[K ..
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+commands.script  debugger.script  lspci.txt    [0m[01;32msimple[0m
+cpuinfo.txt      interrupts.txt   meminfo.txt  simple.c
+[m]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git push
+fatal: No destination configured to push to.
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gdbinit
+#	commands.script
+#	cpuinfo.txt
+#	debugger.script
+#	interrupts.txt
+#	lspci.txt
+#	meminfo.txt
+#	simple
+nothing added to commit but untracked files present (use "git add" to track)
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git add simple.c
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.gdbinit
+#	commands.script
+#	cpuinfo.txt
+#	debugger.script
+#	interrupts.txt
+#	lspci.txt
+#	meminfo.txt
+#	simple
+nothing added to commit but untracked files present (use "git add" to track)
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+commands.script  debugger.script  lspci.txt    [0m[01;32msimple[0m
+cpuinfo.txt      interrupts.txt   meminfo.txt  simple.c
+[m]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git add *.c
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git status[K[K[K[K[K[Kadd simple
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhos
