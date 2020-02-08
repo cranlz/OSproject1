@@ -306,4 +306,239 @@ commands.script  debugger.script  lspci.txt    [0m[01;32msimple[0m
 cpuinfo.txt      interrupts.txt   meminfo.txt  simple.c
 [m]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git add *.c
 ]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git status[K[K[K[K[K[Kadd simple
-]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhos
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git add *.txt
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git at[Kdd *.script
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git add .gdbinit
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   .gdbinit
+#	new file:   commands.script
+#	new file:   cpuinfo.txt
+#	new file:   debugger.script
+#	new file:   interrupts.txt
+#	new file:   lspci.txt
+#	new file:   meminfo.txt
+#	new file:   simple
+#
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git commit
+[?1049h[?1h=[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H".git/COMMIT_EDITMSG" 19L, 494C[2;1H# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Committer: root <root@localhost.localdomain>
+#
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       new file:   .gdbinit
+#       new file:   commands.script
+#       new file:   cpuinfo.txt
+#       new file:   debugger.script
+#       new file:   interrupts.txt
+#       new file:   lspci.txt
+#       new file:   meminfo.txt
+#       new file:   simple
+#
+[1m[34m~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [1;1H[?12l[?25h[?25l[m[24;1H[1m[37m[41mE35: No previous regular expression[1;1H[?12l[?25h
+[m# [?25l[24;1H[1m--[m[1m[37m[41m5[m[1m INSERT[m[1m[37m[41mr[m[1m --[m[1m[37m[41mi[m[24;13H[K[2;4H[?12l[?25h[?25l lease enter the commit message for your changes. Lines starting[2;66H[K[2;3H[?12l[?25h[1;1H[?25lC[?12l[?25h[?25lCo[?12l[?25h[?25lom[?12l[?25h[?25lmm[?12l[?25h[?25lmi[?12l[?25h[?25lin[?12l[?25h[?25lnt[?12l[?25h[?25l [?12l[?25h[?25l 1[?12l[?25h[?25l[1;9H[K[1;9H[?12l[?25h[?25l[?12l[?25h[?25l[1;7H[K[1;7H[?12l[?25h[?25l[1;6H[K[1;6H[?12l[?25h[?25li1[?12l[?25h[?25l[1;6H[K[1;6H[?12l[?25h[?25l [?12l[?25h[?25l[?12l[?25h[?25lit[?12l[?25h[?25l [?12l[?25h[?25l 1[?12l[?25h[24;1H[K[1;8H[?25l[?12l[?25h[?25l[24;1H:[?12l[?25hwq[?25l".git/COMMIT_EDITMSG" 19L, 501C written
+[?1l>[?12l[?25h[?1049l[master 5eaf32b] Commit 1
+ Committer: root <root@localhost.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+If the identity used for this commit is wrong, you can fix it with:
+
+    git commit --amend --author='Your Name <you@example.com>'
+
+ 8 files changed, 1062 insertions(+), 0 deletions(-)
+ create mode 100755 .gdbinit
+ create mode 100644 commands.script
+ create mode 100644 cpuinfo.txt
+ create mode 100644 debugger.script
+ create mode 100644 interrupts.txt
+ create mode 100644 lspci.txt
+ create mode 100644 meminfo.txt
+ create mode 100755 simple
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git log
+[?1h=commit 5eaf32b72bd9b1872037add5e8601b8ba2d3635e[m
+Author: root <root@localhost.localdomain>[m
+Date:   Thu Feb 6 22:51:05 2020 -0600[m
+[m
+    Commit 1[m
+[m
+commit 4769ba88b33a72a50254124f47968d15be5a1c3b[m
+Author: root <root@localhost.localdomain>[m
+Date:   Thu Feb 6 22:42:52 2020 -0600[m
+[m
+    initial project version[m
+[K[?1l>]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git e[Khelp push
+Formatting page, please wait...
+[?1049h[?1h=GIT-PUSH(1)                       Git Manual                       GIT-PUSH(1)
+
+[1mNAME[0m
+       git-push - Update remote refs along with associated objects
+
+[1mSYNOPSIS[0m
+       [4mgit[24m [4mpush[24m [--all | --mirror | --tags] [-n | --dry-run] [--receive-pack=<gi t-receive-pack>]
+                  [--repo=<repository>] [-f | --force] [-v | --verbose] [-u | -- set-upstream]
+                  [<repository> [<refspec>...]]
+
+[1mDESCRIPTION[0m
+       Updates remote refs using local refs, while sending objects necessary
+       to complete the given refs.
+
+       You can make interesting things happen to a repository every time you
+       push into it, by setting up [4mhooks[24m there. See documentation for [1mgit-[0m
+       [1mreceive-pack[0m(1).
+
+[1mOPTIONS[0m
+       <repository>
+           The "remote" repository that is destination of a push operation.
+:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KBB[K           This parameter can be either a URL (see the section GIT URLS below)
+:[K[K [KESCESC[KOO[KBB[K           or the name of a remote (see the section REMOTES below).
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K       <refspec>...
+:[K[K [KESCESC[KOO[KBB[K           The format of a <refspec> parameter is an optional plus +, followed
+:[K[K [KESCESC[KOO[KBB[K           by the source ref <src>, followed by a colon :, followed by the
+:[K[K [KESCESC[KOO[KBB[K           destination ref <dst>. It is used to specify with what <src> object
+:[K[K [KESCESC[KOO[KBB[K           the <dst> ref in the remote repository is to be updated.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K           The <src> is often the name of the branch you would want to push,
+:[K[K [KESCESC[KOO[KBB[K           but it can be any arbitrary "SHA-1 expression", such as master~4 or
+:[K[K [KESCESC[KOO[KBB[K           HEAD (see [1mgit-rev-parse[0m(1)).
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K           The <dst> tells which ref on the remote side is updated with this
+:[K[K [KESCESC[KOO[KBB[K           push. Arbitrary expressions cannot be used here, an actual ref must
+:[K[K [KESCESC[KOO[KBB[K           be named. If :<dst> is omitted, the same ref as <src> will be
+:[K[K [KESCESC[KOO[KBB[K           updated.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K           The object referenced by <src> is used to update the <dst>
+:[K[K [KESCESC[KOO[KBB[K           reference on the remote side, but by default this is only allowed
+:[K[K [KESCESC[KOO[KBB[K           if the update can fast-forward <dst>. By having the optional
+:[K[K [KESCESC[KOO[KBB[K           leading +, you can tell git to update the <dst> ref even when the
+:[K[K [KESCESC[KOO[KBB[K           update is not a fast-forward. This does [1mnot[0m attempt to merge <src>
+:[K[K [KESCESC[KOO[KBB[K           into <dst>. See EXAMPLES below for details.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KBB[K           tag <tag> means the same as refs/tags/<tag>:refs/tags/<tag>.
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K [KESCESC[KOO[KAA[K[HM       <refspec>...
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM           or the name of a remote (see the section REMOTES below).
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM           This parameter can be either a URL (see the section GIT URLS below)
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM           The "remote" repository that is destination of a push operation.
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM       <repository>
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM[1mOPTIONS[0m
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM       [1mreceive-pack[0m(1).
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM       push into it, by setting up [4mhooks[24m there. See documentation for [1mgit-[0m
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM       You can make interesting things happen to a repository every time you
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM       to complete the given refs.
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM       Updates remote refs using local refs, while sending objects necessary
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM[1mDESCRIPTION[0m
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM                  [<repository> [<refspec>...]]
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HMset-upstream]
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM                  [--repo=<repository>] [-f | --force] [-v | --verbose] [-u | --[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HMt-receive-pack>]
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM       [4mgit[24m [4mpush[24m [--all | --mirror | --tags] [-n | --dry-run] [--receive-pack=<gi[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM[1mSYNOPSIS[0m
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM       git-push - Update remote refs along with associated objects
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM[1mNAME[0m
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HM
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[HMGIT-PUSH(1)                       Git Manual                       GIT-PUSH(1)
+[24;1H[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KAA[K[K:[K[K [KESCESC[KOO[KBB[K           This parameter can be either a URL (see the section GIT URLS below)
+:[K[K [KESCESC[KOO[KBB[K           or the name of a remote (see the section REMOTES below).
+:[K[K [KESCESC[KOO[KBB[K
+:[K[K[?1l>[?1049l
+[3]+  Stopped                 git help push
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git remote add origit[Kn git@github.com:[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Khttps://github.com/cranlz/OSpro ject1.git
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git push -u origin master
+error:  while accessing https://github.com/cranlz/OSproject1.git/info/refs
+
+fatal: HTTP request failed
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git add README.d[Kmd
+fatal: pathspec 'README.md' did not match any files
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# teac[K[K[Kouch README.md
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# ls
+commands.script  debugger.script  lspci.txt    README.md  simple.c
+cpuinfo.txt      interrupts.txt   meminfo.txt  [0m[01;32msimple[0m
+[m]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git add README.md
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git commit -m "added ream[Kdme"
+[master 06abfe5] added readme
+ Committer: root <root@localhost.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+If the identity used for this commit is wrong, you can fix it with:
+
+    git commit --amend --author='Your Name <you@example.com>'
+
+ 0 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git push -u origin master
+error:  while accessing https://github.com/cranlz/OSproject1.git/info/refs
+
+fatal: HTTP request failed
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git remote set-url origin https://cranlz[K[K[K[K[K[Kgithub.cin[K[Kom/cranlz/O Sporjec[K[K[K[K[Kroject1.git
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git remote set-url origin https://github.com/cranlz/OSSproject1.git[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[28Ppush -u origin master
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+error:  while accessing https://github.com/cranlz/OSproject1.git/info/refs
+
+fatal: HTTP request failed
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git remote set-url origin https://cranlz:cranlz56Eigt [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ch t9@github.com/cranlz/o[KOSproject1.git
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git remote set-url origin https://cranlz:cranlz56Eightt9@github.com/cranlz/OSproject1.git[A[28Ppush -u origin master
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+error:  while accessing https://cranlz:cranlz56Eight9@github.com/cranlz/OSproject1.git/info/refs
+
+fatal: HTTP request failed
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git push -u origin masterremote set-url origin https://cranlz:cranlz56Eightt9@github.com/cranlz/OSproject1.git[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K@github.com/c ranlz.[K/OSproject1.gim[Kt
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git remote set-url origin https://cranlz@github.com/crranlz/OSproject1.git[A[C[C[C[C[C[C[C[C[C[C[C[28Ppush -u origin master
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+error:  while accessing https://cranlz@github.com/cranlz/OSproject1.git/info/refs
+
+fatal: HTTP request failed
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git push -u origin master
+error:  while accessing https://cranlz@github.com/cranlz/OSproject1.git/info/refs
+
+fatal: HTTP request failed
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git push -u origin master
+
+error:  while accessing https://cranlz@github.com/cranlz/OSproject1.git/info/refs
+
+fatal: HTTP request failed
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# 
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git push -u origin master
+error:  while accessing https://cranlz@github.com/cranlz/OSproject1.git/info/refs
+
+fatal: HTTP request failed
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git push -u origin master
+error:  while accessing https://cranlz@github.com/cranlz/OSproject1.git/info/refs
+
+fatal: HTTP request failed
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git push -u origin master
+error:  while accessing https://cranlz@github.com/cranlz/OSproject1.git/info/refs
+
+fatal: HTTP request failed
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git push -u origin master
+error:  while accessing https://cranlz@github.com/cranlz/OSproject1.git/info/refs
+
+fatal: HTTP request failed
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# git push -u origin master
+error:  while accessing https://cranlz@github.com/cranlz/OSproject1.git/info/refs
+
+fatal: HTTP request failed
+]0;Connor@localhost:/home/Connor/Documents/comp3500/project1[root@localhost project1]# clear
+[H[2J]0;Co
